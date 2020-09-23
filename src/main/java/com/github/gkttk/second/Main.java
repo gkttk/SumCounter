@@ -9,7 +9,6 @@ import com.github.gkttk.second.view.factory.ResultPrinterFactory;
 
 public class Main {
     public static void main(String[] args) {
-
         //logic
         ArgumentsHandlerFactory argumentsHandlerFactory = new SumCountArgumentsHandlerFactory();
         ArgumentsHandler argumentHandler = argumentsHandlerFactory.createArgumentHandler();
