@@ -11,12 +11,12 @@ public class SumCountArgumentHandlerTest {
     private static ArgumentsHandler sumCountArgumentHandler;
 
     @BeforeAll
-    static void init(){
+    static void init() {
         sumCountArgumentHandler = new SumCountArgumentsHandler();
     }
 
     @Test
-    public void testProcessArgumentsWhenAllArgumentsAreNotNumbers(){
+    public void testProcessArgumentsWhenAllArgumentsAreNotNumbers() {
         String[] arguments = {"one", "two", "three"};
         long expectedValue = 0;
         long resultArgumentsSum = sumCountArgumentHandler.processArguments(arguments);
@@ -24,7 +24,7 @@ public class SumCountArgumentHandlerTest {
     }
 
     @Test
-    public void testProcessArgumentsWhenAllArgumentsAreNumbers(){
+    public void testProcessArgumentsWhenAllArgumentsAreNumbers() {
         String[] arguments = {"1", "2", "3"};
         long expectedValue = 6;
         long resultArgumentsSum = sumCountArgumentHandler.processArguments(arguments);
@@ -32,17 +32,12 @@ public class SumCountArgumentHandlerTest {
     }
 
     @Test
-    public void testProcessArgumentsWhenAllArgumentsAreMixed(){
+    public void testProcessArgumentsWhenAllArgumentsAreMixed() {
         String[] arguments = {"1", "two", "three", "4"};
         long expectedValue = 5;
         long resultArgumentsSum = sumCountArgumentHandler.processArguments(arguments);
         Assertions.assertEquals(expectedValue, resultArgumentsSum);
     }
-
-
-
-
-
 
 
 }

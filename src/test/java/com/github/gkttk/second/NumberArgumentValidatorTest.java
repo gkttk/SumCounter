@@ -11,25 +11,23 @@ public class NumberArgumentValidatorTest {
     private static ArgumentValidator numberArgumentValidator;
 
     @BeforeAll
-    static void init(){
+    static void init() {
         numberArgumentValidator = new NumberArgumentValidator();
     }
 
     @Test
-    public void testValidateArgumentWhenArgumentIsNotANumber(){
+    public void testValidateArgumentWhenArgumentIsNotANumber() {
         String argument = "one";
         boolean resultValidateArgument = numberArgumentValidator.validateArgument(argument);
         Assertions.assertFalse(resultValidateArgument);
     }
 
     @Test
-    public void testValidateArgumentWhenArgumentIsANumber(){
+    public void testValidateArgumentWhenArgumentIsANumber() {
         String argument = "1";
         boolean resultValidateArgument = numberArgumentValidator.validateArgument(argument);
         Assertions.assertTrue(resultValidateArgument);
     }
-
-
 
 
 }

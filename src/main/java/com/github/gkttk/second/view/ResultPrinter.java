@@ -1,7 +1,11 @@
 package com.github.gkttk.second.view;
 
-public interface ResultPrinter<T> {
+/**
+ * This interface is responsible for result output
+ */
 
-    void print(T result);
+public interface ResultPrinter {
+
+    void print(long result);
 
 }
